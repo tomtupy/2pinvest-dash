@@ -1,0 +1,21 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.row {
+  padding-bottom: 50px;
+}
+
+#architecture_block {
+	background-color: rgba(242, 182, 50, .3);
+	border: 3px dashed #f2b632;
+	padding: 10px;
+}
