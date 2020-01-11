@@ -70,6 +70,8 @@ func GetAirflowStatus(w http.ResponseWriter, r *http.Request) {
         json.NewEncoder(w).Encode(WebGetRequestToString(result))
         return
     }
+    result.Host = airflow_host
+    result.Port = airflow_port
 
     response := WebGetRequest(fmt.Sprintf("http://%s:%s/api/experimental/latest_runs", airflow_host, airflow_port))
 
@@ -113,6 +115,8 @@ func GetKafkaStatus(w http.ResponseWriter, r *http.Request) {
         json.NewEncoder(w).Encode(WebGetRequestToString(result))
         return
     }
+    result.Host = kafka_host
+    result.Port = kafka_rest_port
 
     // 1. Get brokers
     response := WebGetRequest(fmt.Sprintf("http://%s:%s/topics", kafka_host, kafka_rest_port))
