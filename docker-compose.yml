@@ -31,3 +31,5 @@ services:
     command: npm start
     links:
       - backend-web-server
+    environment:
+      - REACT_APP_BACKEND_URL=http://0.0.0.0:8080

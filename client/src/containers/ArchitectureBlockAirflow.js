@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Card, Header, Image, Icon, List } from "semantic-ui-react";
-import config from '../config';
 
 class ArchitectureBlockAirflow extends Component {
   constructor(props) {
@@ -16,7 +15,7 @@ class ArchitectureBlockAirflow extends Component {
   }
 
   componentDidMount() {
-    axios.get(config.endpoint_url + "/api/service/airflow/status").then(res => {
+    axios.get(process.env.REACT_APP_BACKEND_URL + "/api/service/airflow/status").then(res => {
       console.log(res);
       try {
         let res_obj = JSON.parse(res["data"]);

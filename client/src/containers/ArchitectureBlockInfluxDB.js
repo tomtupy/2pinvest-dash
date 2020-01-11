@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Card, Header, Image, Icon, List } from "semantic-ui-react";
-import config from '../config';
 
 class ArchitectureBlockInfluxDB extends Component {
   constructor(props) {

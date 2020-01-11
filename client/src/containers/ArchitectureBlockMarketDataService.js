@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Container, Card, Header, Image, Icon, List } from "semantic-ui-react";
-import config from '../config';
 
 class ArchitectureBlockMarketDataService extends Component {
   constructor(props) {
